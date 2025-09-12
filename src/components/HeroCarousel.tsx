@@ -197,24 +197,27 @@ export function HeroCarousel() {
             ))}
           </div>
         </div>
-
         {/* Dots indicator - 9 dots centered */}
-        <div className="flex justify-center mt-6">
-          <div className="flex space-x-1.5">
-            {Array.from({ length: 9 }).map((_, idx) => (
-              <button
-                key={idx}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-200 $${ // safe guard: keep original behavior
-                  idx === currentSlide 
-                    ? 'bg-white w-4' 
-                    : 'bg-white/40 hover:bg-white/60'
-                }`}
-                onClick={() => instanceRef.current?.moveToIdx(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+<div className="flex justify-center mt-6">
+  <div className="flex space-x-1.5">
+    {Array.from({ length: 9 }).map((_, idx) => (
+      <button
+        key={idx}
+        className={`h-2 w-2 rounded-full transition-all duration-200 ${
+          idx === currentSlide
+            ? 'bg-black dark:bg-white scale-125'
+            : 'bg-black/40 hover:bg-black/60 dark:bg-white/40 dark:hover:bg-white/60'
+        }`}
+        onClick={() => instanceRef.current?.moveToIdx(idx)}
+        aria-label={`Go to slide ${idx + 1}`}
+      />
+    ))}
+  </div>
+</div>
+
+        
+        
+
 
         {/* Navigation arrows - BOTH at right edge (< >) */}
         <div className="absolute right-4 top-full mt-2 flex space-x-1">
