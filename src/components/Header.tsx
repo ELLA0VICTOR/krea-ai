@@ -21,12 +21,12 @@ export function Header() {
       <div className="flex h-14 items-center justify-between px-4 w-full">
         {/* Left section - Logo and brand name */}
         <div className="flex items-center space-x-4">
-          <img
+          <img 
             src="/images/krea-logo2.svg"
             alt="Krea AI"
             width={28}
             height={28}
-            className="object-contain w-7 h-7"
+            className="object-contain w-7 h-7 dark:invert"
           />
 
           <div className="flex items-center space-x-2">
